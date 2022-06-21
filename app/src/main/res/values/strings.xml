@@ -4,5 +4,15 @@
     <string name="slogan_name">We will help you to find your way!</string>
     <string name="powered_by">Powered By AJohn</string>
     <string name="let_get_started">LET GET STARTED</string>
-    <string name="first_slide_desc">You can search the map 地図を検索できます</string>
+
+    <string name="first_slide_title">You can take the tram</string>
+    <string name="second_slide_title">You can enjoy nature</string>
+    <string name="third_slide_title">You can bathe in the sea of flowers</string>
+    <string name="fourth_slide_title">You can meet stars</string>
+
+    <string name="first_slide_desc">電車に乗ってもいいです</string>
+    <string name="second_slide_desc">自然を楽しむことができます</string>
+    <string name="third_slide_desc">花の海を浴びることができます</string>
+    <string name="fourth_slide_desc">スターに会うことができます</string>
+
 </resources>
