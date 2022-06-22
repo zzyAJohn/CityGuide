@@ -23,10 +23,6 @@ public class SliderAdapter extends PagerAdapter {
     }
 
     int images[] = {
-//            R.drawable.splash_screen_background,
-//            R.drawable.splash_screen_background,
-//            R.drawable.splash_screen_background,
-//            R.drawable.splash_screen_background
             R.drawable.image1,
             R.drawable.image2,
             R.drawable.image3,
