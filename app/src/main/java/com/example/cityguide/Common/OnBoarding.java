@@ -3,13 +3,20 @@ package com.example.cityguide.Common;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.View;
+import android.view.WindowManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.example.cityguide.HelperClasses.SliderAdapter;
 import com.example.cityguide.R;
+import com.example.cityguide.User.UserDashboard;
 
 public class OnBoarding extends AppCompatActivity {
 
@@ -18,23 +25,40 @@ public class OnBoarding extends AppCompatActivity {
 
     SliderAdapter sliderAdapter;
     TextView[] dots;
+    Button letsGetStarted;
+    Animation animation;
+    int currentPos;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_on_boarding);
 
         //Hooks
         viewPager = findViewById(R.id.slider);
         dotsLayout = findViewById(R.id.dots);
+        letsGetStarted = findViewById(R.id.get_started_btn);
 
         //Call adapter
         sliderAdapter = new SliderAdapter(this);
         viewPager.setAdapter(sliderAdapter);
 
+        //Dots
         addDots(0);
         viewPager.addOnPageChangeListener(changeListener);
+    }
+
+    //点击跳过跳转活动
+    public void skip(View view) {
+        startActivity(new Intent(getApplicationContext(), UserDashboard.class));
+        finish();
+    }
+
+    //点击下一个页数加一
+    public void next(View view) {
+        viewPager.setCurrentItem(currentPos + 1);
     }
 
     //页面左下角添加计数功能
@@ -67,7 +91,25 @@ public class OnBoarding extends AppCompatActivity {
         @Override
         public void onPageSelected(int position) {
             addDots(position);
+            currentPos = position;
 
+            if(position == 0) {
+                letsGetStarted.setVisibility(View.INVISIBLE);
+            }
+            else if(position == 1) {
+                letsGetStarted.setVisibility(View.INVISIBLE);
+            }
+            else if(position == 2) {
+                letsGetStarted.setVisibility(View.INVISIBLE);
+            }
+            else {//最后一页显示start，滑动进入
+                animation = AnimationUtils.loadAnimation(OnBoarding.this, R.anim.bottom_anim);
+                letsGetStarted.setAnimation(animation);
+                letsGetStarted.setVisibility(View.VISIBLE);
+                letsGetStarted.setOnClickListener(view -> {
+                    skip(view);
+                });
+            }
         }
 
         @Override

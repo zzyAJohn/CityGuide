@@ -15,4 +15,6 @@
     <string name="third_slide_desc">花の海を浴びることができます</string>
     <string name="fourth_slide_desc">スターに会うことができます</string>
 
+    <string name="skip_btn">SKIP</string>
+
 </resources>
