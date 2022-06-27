@@ -67,14 +67,10 @@ public class SplashScreen extends AppCompatActivity {
                 else {
                     Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
                     startActivity(intent);
-
                 }
                 finish();
-
             }
         },SPLASH_TIME);
-
-
 
     }
 }
