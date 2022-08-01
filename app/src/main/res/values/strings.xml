@@ -17,4 +17,9 @@
 
     <string name="skip_btn">SKIP</string>
 
+    <string name="home">home</string>
+    <string name="search">search</string>
+    <string name="all_categories">all categories</string>
+    <string name="add_missing_place">add missing place</string>
+
 </resources>

@@ -25,21 +25,21 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
-            android:text="McDonald's"
+            android:text="枫原万叶"
             android:textColor="@color/black"
             android:textSize="20sp"/>
 
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:rating="3.5"
+            android:rating="5.0"
             style="@style/Widget.AppCompat.RatingBar.Small"/>
 
         <TextView
             android:id="@+id/featured_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="dasljf sladjfls lad ksad"/>
+            android:text="可叹落叶飘零"/>
 
 
     </LinearLayout>

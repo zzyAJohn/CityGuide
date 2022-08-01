@@ -14,10 +14,14 @@
         <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1855" />
         <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/activity_on_boarding.xml" value="0.264" />
         <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/activity_onboarding.xml" value="0.25885416666666666" />
-        <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/activity_user_dashboard.xml" value="0.2" />
-        <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/featured_card_design.xml" value="0.2578125" />
+        <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/activity_user_dashboard.xml" value="0.2097931616715914" />
+        <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/categories_card_design.xml" value="0.21248396750748183" />
+        <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/featured_card_design.xml" value="0.22387387387387386" />
+        <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/menu_header.xml" value="0.264" />
+        <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/most_viewed_card_design.xml" value="0.21248396750748183" />
         <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/slides_layout.xml" value="0.264" />
         <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/layout/splash_screen.xml" value="0.2" />
+        <entry key="..\:/Codefield/AndroidStudio/CityGuide/app/src/main/res/menu/main_menu.xml" value="0.2116289012398461" />
       </map>
     </option>
   </component>
