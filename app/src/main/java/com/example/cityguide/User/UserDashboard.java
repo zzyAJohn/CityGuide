@@ -2,14 +2,19 @@ package com.example.cityguide.User;
 
 import static com.example.cityguide.R.id.drawer_layout;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.view.View;
 import android.view.WindowManager;
+import android.widget.ImageView;
 
 import com.example.cityguide.HelperClasses.HomeAdapter.FeaturedAdapter;
 import com.example.cityguide.HelperClasses.HomeAdapter.FeaturedHelperClass;
@@ -20,12 +25,13 @@ import com.google.android.material.navigation.NavigationView;
 
 import java.util.ArrayList;
 
-public class UserDashboard extends AppCompatActivity {
+public class UserDashboard extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     //Variables
     RecyclerView featuredRecycler, mostViewedRecycler, categoriesRecycler;
     RecyclerView.Adapter adapter;
     private GradientDrawable gradient1, gradient2, gradient3, gradient4;
+    ImageView menuIcon;
 
     //Drawer Menu
     DrawerLayout drawerLayout;
@@ -41,16 +47,36 @@ public class UserDashboard extends AppCompatActivity {
         featuredRecycler = findViewById(R.id.featured_recycler);
         mostViewedRecycler = findViewById(R.id.most_viewed_recycler);
         categoriesRecycler = findViewById(R.id.categories_recycler);
+        menuIcon = findViewById(R.id.menu_icon);
 
         //Menu hooks
         drawerLayout = findViewById(drawer_layout);
         navigationView = findViewById(R.id.navigation_view);
 
+        navigationDrawer();
 
         //Recycler Views Function Calls
         featuredRecycler();
         mostViewedRecycler();
         categoriesRecycler();
+
+    }
+
+    private void navigationDrawer() {
+
+        //Naviagtion Drawer
+        navigationView.bringToFront();
+        navigationView.setNavigationItemSelectedListener(this);
+        navigationView.setCheckedItem(R.id.nav_home);
+
+        menuIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(drawerLayout.isDrawerVisible(GravityCompat.START))
+                    drawerLayout.closeDrawer(GravityCompat.START);
+                else drawerLayout.openDrawer(GravityCompat.START);
+            }
+        });
 
     }
 
@@ -111,4 +137,8 @@ public class UserDashboard extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        return true;
+    }
 }
